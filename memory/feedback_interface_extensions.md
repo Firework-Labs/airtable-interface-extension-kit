@@ -2,7 +2,6 @@
 name: Airtable Interface Extension constraints (supplemental)
 description: SDK patterns and CDN loading details that supplement CLAUDE.md — code snippets and edge cases
 type: feedback
-originSessionId: 2a09c04f-54d3-4b21-b9e1-e39bbba29c05
 ---
 ## CDN loading dependency order (code pattern)
 

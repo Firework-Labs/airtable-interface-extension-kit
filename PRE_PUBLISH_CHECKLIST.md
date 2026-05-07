@@ -1,6 +1,6 @@
 # Pre-Publish Checklist
 
-**Status (as of 2026-05-07):** Kit is built, locally committed (`0b4a4a1`), validated live in Airtable, and **not pushed**. Owner: `mikeklar` on GitHub. Eventual intent: make this **public**, but with one more genericization + safety pass first.
+**Status (as of 2026-05-07):** Kit is built, locally committed, validated live in Airtable, and **not pushed**. Destination: **Firework Labs** GitHub org (decided 2026-05-07; supersedes earlier `mikeklar` plan). Eventual intent: make this **public**, but with one more genericization + safety pass first.
 
 This file tracks the work that needs to happen before pushing to a public remote. Delete it once the kit ships.
 
@@ -94,16 +94,19 @@ cd "/Users/michaelklar/Claude Cowork/airtable-interface-extension-kit"
 git status
 git log --oneline
 
-# Create + push in one shot (public, mikeklar/airtable-interface-extension-kit)
-gh repo create airtable-interface-extension-kit \
+# Create + push in one shot (public, under the Firework Labs org)
+# Replace <firework-labs-org-slug> with the actual GitHub org slug.
+gh repo create <firework-labs-org-slug>/airtable-interface-extension-kit \
   --public \
   --source . \
   --remote origin \
   --push \
-  --description "..." \
+  --description "A starter kit for Airtable Custom Interface Extensions: SDK gotchas pre-documented, antd 5.x scaffolding, and a hello-world demo. Built from production project experience. No npm — pure CDN + bash concatenation." \
   --add-topic airtable \
   --add-topic airtable-extensions \
   --add-topic interface-extensions \
+  --add-topic react \
+  --add-topic antd \
   --add-topic starter-kit
 
 # Then delete this checklist

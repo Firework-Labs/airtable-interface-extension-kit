@@ -2,6 +2,8 @@
 
 A starter kit for building Airtable Custom Interfaces with React + antd. Distilled from a production project, with the SDK gotchas already neutralized and the shared scaffold already in place.
 
+Made by Michael Klar. Released under the [MIT License](LICENSE).
+
 ## Quickstart
 
 ```bash
@@ -39,7 +41,7 @@ bash scripts/new-extension.sh my-other-extension
 - **`scripts/new-extension.sh`** — Generator for new extension folders.
 - **`docs/`** — Topical docs distilled from ~10 sessions of footgun-trigger experience: SDK gotchas, API patterns, the antd-in-iframe canon, build/deploy, UX conventions, lessons learned.
 - **`memory/`** — Portable Nimbalyst memory files. If you open the kit in Nimbalyst, these load automatically.
-- **`.claude/settings.local.json`** — Starting permission allowlist for Claude Code. This is intentionally minimal: add your project's domains (your Airtable base URLs, the Airtable docs site `airtable.com`, internal tools, etc.) as needed.
+- **`.claude/settings.example.json`** — Starter permission allowlist for Claude Code. Copy to `.claude/settings.local.json` to activate (Claude Code reads only the `.local` filename). The starter is intentionally minimal: add your project's domains (your Airtable base URLs, the Airtable docs site `airtable.com`, internal tools, etc.) as needed.
 
 ## Where to learn more
 

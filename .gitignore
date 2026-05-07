@@ -1,1 +1,3 @@
 extensions/output/*.bundle.jsx
+.DS_Store
+**/.DS_Store
