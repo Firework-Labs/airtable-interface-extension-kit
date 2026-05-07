@@ -2,7 +2,7 @@
 
 A starter kit for building Airtable Custom Interfaces with React + antd. Distilled from a production project, with the SDK gotchas already neutralized and the shared scaffold already in place.
 
-Made by Mike Klar. Released under the [MIT License](LICENSE).
+Released under the [MIT License](LICENSE).
 
 ## Quickstart
 
