@@ -1,6 +1,6 @@
 # Airtable Interface Extension Kit
 
-> **⚠ Not yet pushed to a remote.** Before publishing publicly, work through [`PRE_PUBLISH_CHECKLIST.md`](PRE_PUBLISH_CHECKLIST.md) — covers a fresh-eyes pass for genericization, secrets/PII, personal preferences, license, and the `gh repo create` command.
+> **⚠ Not yet pushed to a remote.** Before publishing publicly, work through [PRE_PUBLISH_CHECKLIST.md](./PRE_PUBLISH_CHECKLIST.md) — covers a fresh-eyes pass for genericization, secrets/PII, personal preferences, license, and the `gh repo create` command.
 
 ## Project Overview
 
@@ -12,23 +12,23 @@ Airtable Custom Interface (Edit Source path), React 16.14.0 (SDK constraint), an
 
 ## Critical reading
 
-Before adding code, read [`docs/airtable-sdk-gotchas.md`](docs/airtable-sdk-gotchas.md). Many of the SDK's failure modes are silent — wrong behavior with no error.
+Before adding code, read [airtable-sdk-gotchas.md](./docs/airtable-sdk-gotchas.md). Many of the SDK's failure modes are silent — wrong behavior with no error.
 
 | Doc | When to read |
-|-----|--------------|
-| [`docs/airtable-sdk-gotchas.md`](docs/airtable-sdk-gotchas.md) | Before any code that touches `useRecords`, `useBase`, `getCellValue*`, `createRecordAsync`, `updateRecordAsync` |
-| [`docs/airtable-api-patterns.md`](docs/airtable-api-patterns.md) | Before writing linked-record updates, formula fields, or automation scripts |
-| [`docs/antd-in-iframe-canon.md`](docs/antd-in-iframe-canon.md) | Before adding any antd component that uses popups, modals, messages, or layouts |
-| [`docs/build-and-deploy.md`](docs/build-and-deploy.md) | When the build/concat order doesn't match what you expect, or when adding new shared deps |
-| [`docs/ux-conventions.md`](docs/ux-conventions.md) | When designing a new view (filter semantics, persistence, drawer keys, etc.) |
-| [`docs/lessons-learned-airtable.md`](docs/lessons-learned-airtable.md) | For deeper context on why specific gotchas exist (cite the original session date for traceability) |
-| [`docs/porting-checklist.md`](docs/porting-checklist.md) | First-time clone: clone → brand → build → paste workflow |
-| [`docs/hello-world-airtable-setup.md`](docs/hello-world-airtable-setup.md) | What table schema the demo expects |
+| --- | --- |
+| [airtable-sdk-gotchas.md](./docs/airtable-sdk-gotchas.md) | Before any code that touches `useRecords`, `useBase`, `getCellValue*`, `createRecordAsync`, `updateRecordAsync` |
+| [airtable-api-patterns.md](./docs/airtable-api-patterns.md) | Before writing linked-record updates, formula fields, or automation scripts |
+| [antd-in-iframe-canon.md](./docs/antd-in-iframe-canon.md) | Before adding any antd component that uses popups, modals, messages, or layouts |
+| [build-and-deploy.md](./docs/build-and-deploy.md) | When the build/concat order doesn't match what you expect, or when adding new shared deps |
+| [ux-conventions.md](./docs/ux-conventions.md) | When designing a new view (filter semantics, persistence, drawer keys, etc.) |
+| [lessons-learned-airtable.md](./docs/lessons-learned-airtable.md) | For deeper context on why specific gotchas exist (cite the original session date for traceability) |
+| [porting-checklist.md](./docs/porting-checklist.md) | First-time clone: clone → brand → build → paste workflow |
+| [hello-world-airtable-setup.md](./docs/hello-world-airtable-setup.md) | What table schema the demo expects |
 
 ## Key Files
 
 | File | Purpose |
-|------|---------|
+| --- | --- |
 | `extensions/shared/cdn-loader.jsx` | React bridging, CDN script/CSS loading, `<AntdLoader>` |
 | `extensions/shared/brand.config.jsx` | `BRAND` palette + `STORAGE_PREFIX` — **single edit point for branding** |
 | `extensions/shared/constants.jsx` | Generic design tokens (`COLORS`, `SHADOWS`, `AIRTABLE_COLORS`, `CHIP_FALLBACK`) |
@@ -50,7 +50,7 @@ Concatenation order is load-bearing — see `docs/build-and-deploy.md` if you ad
 
 ## Conventions
 
-- Edit modular source files, **never edit `output/` files**.
+- Edit modular source files, **never edit \****`output/`**\*\* files**.
 - New extensions get scaffolded via `scripts/new-extension.sh <name>`.
 - Persist UI state via `loadState`/`saveState` (sessionStorage, namespaced by `STORAGE_PREFIX`).
 - Surface missing tables/fields via `<DiagnosticBanner>`, never silent rendering.

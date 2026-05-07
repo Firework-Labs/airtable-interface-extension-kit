@@ -1,6 +1,6 @@
 # Airtable API Patterns
 
-Format-and-shape rules that aren't well-documented in the SDK reference but are required for code to actually work. Cross-reference with [`airtable-sdk-gotchas.md`](airtable-sdk-gotchas.md) for the silent-failure modes.
+Format-and-shape rules that aren't well-documented in the SDK reference but are required for code to actually work. Cross-reference with [airtable-sdk-gotchas.md](./airtable-sdk-gotchas.md) for the silent-failure modes.
 
 ## Linked Records
 
@@ -26,9 +26,9 @@ Conflating the two is the most common silent-write failure. Plain strings cause 
 
 ## Formulas
 
-- **Always wrap linked fields in `ARRAYJOIN()`** when reading them in formulas. Otherwise you'll get array-as-string artifacts in the cell value.
+- **Always wrap linked fields in \****`ARRAYJOIN()`** when reading them in formulas. Otherwise you'll get array-as-string artifacts in the cell value.
 
-- **`AND()` evaluates all arguments regardless of earlier results.** If a later argument depends on an earlier one being true (e.g., MID() with positions computed from FIND()), the cascade fails on absent data. Use nested `IF(AND(guard checks), IF(AND(content checks), "Valid", "Invalid"), "Invalid")`.
+- **`AND()`**** evaluates all arguments regardless of earlier results.** If a later argument depends on an earlier one being true (e.g., MID() with positions computed from FIND()), the cascade fails on absent data. Use nested `IF(AND(guard checks), IF(AND(content checks), "Valid", "Invalid"), "Invalid")`.
 
 - **TRIM() is cheap insurance on string parsing.** LLM-generated content occasionally has stray whitespace; TRIM() costs nothing and prevents invisible parsing bugs.
 
@@ -38,7 +38,7 @@ Conflating the two is the most common silent-write failure. Plain strings cause 
 
 - **Single-select write format:** plain strings (`'AMER'`), not `{ name: 'AMER' }` objects.
 - **Multi-select write format:** array of `{ name }` objects (`[{ name: 'AMER' }, { name: 'EMEA' }]`). Empty array `[]` clears.
-- **Use `typecast: true`** when writing values that may not yet exist as choices — Airtable will auto-create the option.
+- **Use \****`typecast: true`** when writing values that may not yet exist as choices — Airtable will auto-create the option.
 
 ## Metadata API gaps
 
@@ -59,8 +59,8 @@ Airtable's single/multi-select fields each have a `color` string (e.g., `'blueDa
 
 ## Automation Scripts
 
-- **`input.config()` can only be called once per script.** Store the result in a const at the top of the script.
+- **`input.config()`**** can only be called once per script.** Store the result in a const at the top of the script.
 - **Input variable casing must match exactly.** `recordID` (capital D) in the UI vs. `input.config().recordId` (lowercase d) silently returns `undefined`.
-- **Run-script steps bypass the 100-record `Find Records` limit.** Use `table.selectRecordsAsync()` for full datasets.
+- **Run-script steps bypass the 100-record \****`Find Records`**\*\* limit.** Use `table.selectRecordsAsync()` for full datasets.
 - **No actions allowed after a Repeating Group closes.** Move post-processing into the script that's already inside the group, or into an Update Record action that runs before the group.
 - **"Run automation" buttons require Record Review or Record Detail layouts** in the Interface Designer. Dashboard layouts can't host them.

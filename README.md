@@ -2,7 +2,7 @@
 
 A starter kit for building Airtable Custom Interfaces with React + antd. Distilled from a production project, with the SDK gotchas already neutralized and the shared scaffold already in place.
 
-Made by Michael Klar. Released under the [MIT License](LICENSE).
+Made by Mike Klar. Released under the [MIT License](LICENSE).
 
 ## Quickstart
 
@@ -45,7 +45,7 @@ bash scripts/new-extension.sh my-other-extension
 
 ## Where to learn more
 
-- **Cloning for a new project?** Read [`docs/porting-checklist.md`](docs/porting-checklist.md).
-- **Before adding code?** Read [`docs/airtable-sdk-gotchas.md`](docs/airtable-sdk-gotchas.md). Many of the SDK's failure modes are silent (no error, just wrong behavior).
-- **Hitting an antd issue?** [`docs/antd-in-iframe-canon.md`](docs/antd-in-iframe-canon.md).
-- **Working with the Airtable REST or Blocks SDK API?** [`docs/airtable-api-patterns.md`](docs/airtable-api-patterns.md).
+- **Cloning for a new project?** Read [porting-checklist.md](./docs/porting-checklist.md).
+- **Before adding code?** Read [airtable-sdk-gotchas.md](./docs/airtable-sdk-gotchas.md). Many of the SDK's failure modes are silent (no error, just wrong behavior).
+- **Hitting an antd issue?** [antd-in-iframe-canon.md](./docs/antd-in-iframe-canon.md).
+- **Working with the Airtable REST or Blocks SDK API?** [airtable-api-patterns.md](./docs/airtable-api-patterns.md).
