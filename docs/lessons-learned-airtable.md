@@ -1,6 +1,8 @@
 # Lessons Learned — Airtable Interface Extensions
 
-Excerpts from the source project's session-by-session lessons doc. Filtered to entries that touch SDK behavior, antd integration, formula engineering, automation/batching, dark mode, SVG charting, and extension architecture. Business-logic lessons (prompt design, classification taxonomies, etc.) are intentionally excluded.
+> **Note on provenance.** These excerpts are de-identified records from a real production Airtable project. Technical scenarios (form-pipeline automation, fullscreen presentation dashboards, AI-step orchestration) are preserved verbatim because the concrete framing makes the lessons memorable. No proper nouns, schemas, or identifiers from the source project remain — anything project-specific has been replaced with generic placeholders or removed.
+
+Filtered to entries that touch SDK behavior, antd integration, formula engineering, automation/batching, dark mode, SVG charting, and extension architecture. Business-logic lessons (prompt design, classification taxonomies, etc.) are intentionally excluded.
 
 Each excerpt is tagged with the original session date for traceability.
 
