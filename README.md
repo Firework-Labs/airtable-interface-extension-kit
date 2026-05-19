@@ -53,13 +53,13 @@ You're done in Airtable for now.
 
 You'll need an AI coding assistant — [Claude Code](https://claude.ai/code), [Cursor](https://www.cursor.com/), or VS Code with GitHub Copilot all work well.
 
-1. Download or clone this kit to your computer as a project folder.
+1. Download this kit to your computer as a project folder. (If you know git, you can clone it instead.)
 2. Open the folder in your AI coding tool.
 3. Paste this prompt to get started:
 
    > *I just set up an Airtable interface using the Airtable Interface Extension Kit (this folder). My table is called **[your table name]** and my key fields are **[your field names]**. Please read `CLAUDE.md` and `docs/porting-checklist.md`, then help me build and paste a working extension.*
 
-Your agent will handle the technical setup from there and tell you when you have code ready to paste into Airtable's Edit Source Code panel.
+Your agent will handle the technical setup from there and tell you when you have code ready to paste. To paste it: click your custom element in Airtable (blue box highlight), then choose **"Edit Source Code"** from the **Page > Custom** sidebar.
 
 ---
 
