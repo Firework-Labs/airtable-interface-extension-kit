@@ -56,6 +56,13 @@ The SDK's internal change propagation resolves the table's `primaryField` whenev
 ### Always-mounted subscriptions to secondary tables are a crash vector *(2026-03-11)*
 A component that's rendered unconditionally with a `useRecords(secondaryTable)` keeps an active subscription. When the table updates, the SDK's change propagation can crash. General principle: don't subscribe to tables you're not actively rendering.
 
+### `getCellValueAsString` strips markdown for `richText` fields — use `getCellValue` for the source string *(2026-05-05) [ported from consuming project]*
+A `richText`-typed field's value is markdown source (e.g., `**bold**`). When read with `getCellValueAsString`, the SDK *renders* the markdown to plain text — stripping the syntax characters. When read with `getCellValue`, the markdown source comes back verbatim. For most field types (singleLineText, number, dates) the two methods are interchangeable, so a habit of reaching for `getCellValueAsString` can hide the bug indefinitely until a `richText` field enters the mix.
+
+**Rule:** when reading a field whose type might be `richText` *or* whose contents include formatting characters that matter, use `getCellValue` (or a wrapper that does). Reserve `getCellValueAsString` for cases where you want the SDK's normalization (linked records → primary value, dates → ISO, etc.).
+
+**Diagnostic that surfaced this:** one-time `console.log` of `getCellValue(field)` vs `getCellValueAsString(field)` on the same field — different strings for the same cell is the tell.
+
 ---
 
 ## Formulas
