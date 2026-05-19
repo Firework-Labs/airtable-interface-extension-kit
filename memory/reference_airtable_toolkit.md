@@ -13,4 +13,4 @@ type: reference
 - SDK hook inventory: `useRunInfo`, `useSession`, `useColorScheme`, `useSynced`, `useGlobalConfig`
 - `loadScriptFromURLAsync()` / `loadCSSFromURLAsync()` for CDN library loading
 
-**When to use:** Reference when building new extensions or debugging SDK behavior. The pitfall list is more complete than our project memory — cross-check there first when hitting unexpected behavior.
+**When to use:** Reference when building new extensions or debugging SDK behavior. The pitfall list is more complete than this kit's own memory files — cross-check there first when hitting unexpected behavior.
