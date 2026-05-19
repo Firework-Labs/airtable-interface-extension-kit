@@ -1,7 +1,5 @@
 # Airtable Interface Extension Kit
 
-> **⚠ Not yet pushed to a remote.** Before publishing publicly, work through [PRE_PUBLISH_CHECKLIST.md](./PRE_PUBLISH_CHECKLIST.md) — covers a fresh-eyes pass for genericization, secrets/PII, personal preferences, license, and the `gh repo create` command.
-
 ## Project Overview
 
 This is a **starter kit**, not a working app. It packages the project-agnostic SDK gotchas, antd-iframe rules, and reusable React/antd scaffolding from a production Airtable Custom Interface project, so a new project can clone, brand, and build a working extension in one sitting. When this kit is cloned for a real project, the consuming project should rewrite this file from scratch (don't diff against the kit's version).
