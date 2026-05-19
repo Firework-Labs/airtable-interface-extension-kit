@@ -53,3 +53,15 @@ Concatenation order is load-bearing — see `docs/build-and-deploy.md` if you ad
 - Persist UI state via `loadState`/`saveState` (sessionStorage, namespaced by `STORAGE_PREFIX`).
 - Surface missing tables/fields via `<DiagnosticBanner>`, never silent rendering.
 - antd popup components require `getPopupContainer={trigger => trigger.parentElement}` — see the antd canon doc.
+
+## Receiving Contributions
+
+This kit accepts contributions of project-agnostic lessons from consuming projects. The flow:
+
+1. **Source:** A consuming project's lessons-learned file produces a new entry that mentions Airtable SDK behavior, antd-iframe quirks, formula/automation patterns, build conventions, or silent SDK failure modes.
+2. **Filter:** The consuming project's Claude session evaluates the entry against a contribution rubric (pattern reusable by any consumer; see the EUL Tracker project's `docs/kit-contribution-rubric.md` for the canonical version).
+3. **Strip project specificity:** Replace proper nouns and project-specific schema references with placeholders. Keep technical detail verbatim.
+4. **Append to** `docs/lessons-learned-airtable.md` under the appropriate category. Tag the entry heading with `[ported from consuming project]`. The date line matches the original session date for traceability.
+5. **Commit** with message: `docs: port N lesson(s) from consuming project (session YYYY-MM-DD)`.
+
+Lessons authored directly in the kit (e.g., when extending the scaffold itself) don't need the `[ported]` tag.
