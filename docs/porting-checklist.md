@@ -1,3 +1,5 @@
+> **This document is for AI coding agents.** If you're a human getting started, read the [README](../README.md) instead.
+
 # Porting Checklist
 
 Step-by-step from `git clone` to a working extension pasted in Airtable. ~10–15 minutes if you have an Airtable base ready and ~5 if you've already done it once.
