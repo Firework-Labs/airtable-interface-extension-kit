@@ -59,7 +59,7 @@ Concatenation order is load-bearing — see `docs/build-and-deploy.md` if you ad
 This kit accepts contributions of project-agnostic lessons from consuming projects. The flow:
 
 1. **Source:** A consuming project's lessons-learned file produces a new entry that mentions Airtable SDK behavior, antd-iframe quirks, formula/automation patterns, build conventions, or silent SDK failure modes.
-2. **Filter:** The consuming project's Claude session evaluates the entry against a contribution rubric (pattern reusable by any consumer; see the EUL Tracker project's `docs/kit-contribution-rubric.md` for the canonical version).
+2. **Filter:** The consuming project's Claude session evaluates the entry against its own contribution rubric (pattern reusable by any consumer; the rubric lives in the consuming project's `docs/` folder).
 3. **Strip project specificity:** Replace proper nouns and project-specific schema references with placeholders. Keep technical detail verbatim.
 4. **Append to** `docs/lessons-learned-airtable.md` under the appropriate category. Tag the entry heading with `[ported from consuming project]`. The date line matches the original session date for traceability.
 5. **Commit** with message: `docs: port N lesson(s) from consuming project (session YYYY-MM-DD)`.
